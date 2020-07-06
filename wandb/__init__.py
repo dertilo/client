@@ -290,7 +290,7 @@ def _init_headless(run, cloud=True):
     os.close(stderr_master_fd)
     # Listen on the socket waiting for the wandb process to be ready
     try:
-        success, _ = server.listen(30)
+        success = True#, _ = server.listen(30)
     except KeyboardInterrupt:
         success = False
     else:
